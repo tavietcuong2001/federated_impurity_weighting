@@ -79,6 +79,6 @@ fl.simulation.start_simulation(
     client_fn = client_fn,
     num_clients = NUM_CLIENTS,
     config = fl.server.ServerConfig(num_rounds=NUM_ROUNDS),
-    strategy = FedAdp(num_rounds=NUM_ROUNDS, num_clients=NUM_CLIENTS, current_parameters=current_parameters),
+    strategy = FedImp(num_rounds=NUM_ROUNDS, num_clients=NUM_CLIENTS, entropies=entropies, current_parameters=current_parameters),
     client_resources = client_resources
 )
